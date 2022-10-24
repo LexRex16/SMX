@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Add Rows To HTML Table From Array </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  
+    <style type="text/css">
+    @import url("css.css");
+    </style>
+    </head>
+    <body>
+     
+   
+    <table align="center"
+    <table id="table" border="1">
+            
+            <!-- The Row Number 0 -->
+            <tr>
+                <th width="33">DEX</th>
+                <th width="33">HEX</th>
+                <th width="33">COM</th>
+				
+            </tr>
+        
+        </table>
+
+    
+<script>
+     
+            var array = [["&#128514;","&#x1f436;","&#x1f6fa;"],
+                         ["&#129315;","&#x1f437","&#x1f6f5;"],
+                         ["&#128512;","&#x1f42c;","&#128755;&#65039;"],
+                         ["&#128513;","&#x1f428;","&#128756;"],
+                         ["&#128578;","&#x1f42f;","&#x1f699;"],
+                         ["&#128579;","&#x1f430;","&#x1f69c;"],
+                         ["&#128522;","&#x1f435;","&#128669;"],
+                         ["&#128517;","&#x1f9a5;","&#128652;"],
+                         ["&#128519;","&#x1f43a;","&#x1f681;"],
+                         ["&#128521;","&#x1f422;","&#x1f682;"]],
+                table = document.getElementById("table");
+           
+           for(var i = 0; i < array.length; i++)
+           {
+               // create a new row
+               var newRow = table.insertRow(table.length);
+               for(var j = 0; j < array[i].length; j++)
+               {
+                   // create a new cell
+                   var cell = newRow.insertCell(j);
+                   
+                   // add value to the cell
+                   cell.innerHTML = array[i][j];
+               }
+           }
+			 
+        </script></body>
+</html>
